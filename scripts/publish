@@ -6,7 +6,7 @@ rm -r /home/node/working/*
 echo '## Copy project to working folder ##'
 cp -r /home/node/project /home/node/working
 
-cd /home/node/working/
+cd /home/node/working/project
 
 # setup for npm credentials
 echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
