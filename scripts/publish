@@ -12,10 +12,10 @@ cd /home/node/working/project
 echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
 
 npm install --unsafe-perm --no-optional
-if [[ -n $VERSION ]]; then
+if [[ -z $VERSION ]]; then
+  npm publish
+else
   npm version ${VERSION}
   npm publish --tag next
-else
-  npm publish
 fi
 
