@@ -1,6 +1,12 @@
 #! /bin/sh
 
-cd /home/node/project/
+echo '## Ensure directory clean for analysis ##'
+rm -r /home/node/working/*
+
+echo '## Copy project to working folder ##'
+cp -r /home/node/project /home/node/working
+
+cd /home/node/working/
 
 # setup for npm credentials
 echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
