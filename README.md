@@ -2,8 +2,8 @@
 Docker image to publish to npm
 
 ## Usage
-If `TAG_NEXT` environment variable is set to true, then the published package will be tagged `next` to show it's in development.  If set to false (default) then the version in the `package.json` file will be used.
+If the `VERSION` environment variable is passed, then the published package version will be overridden by the supplied value.  If not supplied, then the version in the `package.json` file will be used as is.
 
 ```
-docker run --rm -v "$PWD:/node/app/" -e NPM_TOKEN=<token> -e TAG_NEXT=true defradigital/ffc-npm-publish
+docker run --rm -v "$PWD:/node/app/" -e NPM_TOKEN=<token> -e VERSION=true defradigital/ffc-npm-publish
 ```

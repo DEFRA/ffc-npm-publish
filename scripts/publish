@@ -1,0 +1,13 @@
+#! /bin/sh
+
+cd /home/node/project/
+
+# setup for npm credentials
+echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+
+npm install --unsafe-perm --no-optional
+if [[ -n $VERSION ]]; then
+  npm version ${VERSION}
+fi
+
+npm publish
