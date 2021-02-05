@@ -14,6 +14,8 @@ echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
 npm install --unsafe-perm --no-optional
 if [[ -n $VERSION ]]; then
   npm version ${VERSION}
+  npm publish --tag next
+else
+  npm publish
 fi
 
-npm publish
