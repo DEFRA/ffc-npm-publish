@@ -1,4 +1,4 @@
-ARG PARENT_VERSION=1.2.1-node14.15.0
+ARG PARENT_VERSION=1.2.5-node14.16.1
 
 FROM defradigital/node:${PARENT_VERSION}
 
